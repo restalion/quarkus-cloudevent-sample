@@ -1,0 +1,25 @@
+####
+# This Dockerfile is used in order to build a container that runs the Quarkus application in native (no JVM) mode
+#
+# Before building the docker image run:
+#
+# mvn package -Pnative -Dquarkus.native.container-build=true
+#
+# Then, build the image with:
+#
+# docker build -f src/main/docker/Dockerfile.native -t quarkus/quarkus-cloudevent-sample .
+#
+# Then run the container using:
+#
+# docker run -i --rm -p 8080:8080 quarkus/quarkus-cloudevent-sample
+#
+###
+#FROM gcr.io/distroless/base:debug
+FROM cescoffier/native-base:latest
+WORKDIR /work/
+COPY target/*-runner /work/application
+
+EXPOSE 8080
+USER 1001
+
+CMD ["/work/application", "-Dquarkus.http.host=0.0.0.0"]
