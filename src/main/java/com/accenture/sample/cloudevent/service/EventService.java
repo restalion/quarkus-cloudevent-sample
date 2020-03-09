@@ -81,8 +81,8 @@ public class EventService {
                 .withDatacontenttype(ContentType.APPLICATION_JSON.toString())
                 .withData(payload)
                 .withExtension(tracing)
-                .withSubject("Shortcode update")
-                .withSource(URI.create("/short-code-ingest"))
+                .withSubject("Sample update")
+                .withSource(URI.create("/sample-source"))
                 .build();
 
         LOGGER.debug("type: " + ce.getAttributes().getType());
