@@ -83,6 +83,7 @@ public class EventService {
                 .withExtension(tracing)
                 .withSubject("Sample update")
                 .withSource(URI.create("/sample-source"))
+                .withValidator(validator)
                 .build();
 
         LOGGER.debug("type: " + ce.getAttributes().getType());
