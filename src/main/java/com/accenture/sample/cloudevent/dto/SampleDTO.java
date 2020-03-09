@@ -1,11 +1,9 @@
 package com.accenture.sample.cloudevent.dto;
 
-import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
-
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-public class SampleDTO extends PanacheEntityBase {
+public class SampleDTO {
 
     @NotNull(message = "Code value should be not null")
     private Integer code;
