@@ -6,7 +6,7 @@
   <artifactId>quarkus-cloudevent-sample</artifactId>
   <version>1.0-SNAPSHOT</version>
   <properties>
-    <cloud-events.version>1.2.0</cloud-events.version>
+    <cloud-events.version>1.3.0</cloud-events.version>
     <compiler-plugin.version>3.8.1</compiler-plugin.version>
     <maven.compiler.parameters>true</maven.compiler.parameters>
     <maven.compiler.source>1.8</maven.compiler.source>
